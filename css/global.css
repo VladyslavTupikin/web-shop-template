@@ -1,0 +1,38 @@
+/* Reset default browser settings */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 1px solid red;
+}
+
+:root {
+  --container-width: 1200px;
+  --body-bg-color: rgb(255, 255, 240);
+
+  --hero-mobile-title-font-color: rgb(255, 255, 255);
+  --hero-mobile-subtitle-font-color: rgb(35, 139, 69);
+  --hero-mobile-font: "Montserrat", sans-serif;
+  --hero-mobile-title-font-size: 4rem;
+  --hero-mobile-subtitle-font-size: 4rem;
+  --hero-mobile-letter-spacing: -0.5px;
+  --hero-mobile-title-font-weight: 600;
+  --hero-mobile-subtitle-font-weight: 700;
+}
+/* Default body configuration */
+body {
+  background-color: var(--body-bg-color);
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}

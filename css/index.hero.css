@@ -1,0 +1,36 @@
+.hero,
+.hero__wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../img/hero.jpg") center / cover no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .hero__title {
+    line-height: 0.9;
+    letter-spacing: var(--hero-mobile-letter-spacing);
+    font-family: var(--hero-mobile-font);
+    text-align: center;
+    max-width: 12ch;
+
+    .hero__title-word--light {
+      color: var(--hero-mobile-title-font-color);
+      opacity: 0.65;
+      font-weight: var(--hero-mobile-title-font-weight);
+      font-size: var(--hero-mobile-title-font-size);
+    }
+
+    .hero__title-word--green {
+      color: var(--hero-mobile-subtitle-font-color);
+      opacity: 0.85;
+      font-weight: var(--hero-mobile-subtitle-font-weight);
+      font-size: var(--hero-mobile-subtitle-font-size);
+    }
+  }
+}
