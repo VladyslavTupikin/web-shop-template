@@ -14,8 +14,10 @@
 }
 
 :root {
+  scroll-behavior: smooth;
   --container-width: 1200px;
   --body-bg-color: rgb(255, 255, 240);
+  --global-font-family: "Montserrat", sans-serif;
 
   --hero-mobile-title-font-color: rgb(255, 255, 255);
   --hero-mobile-subtitle-font-color: rgb(35, 139, 69);
@@ -25,12 +27,25 @@
   --hero-mobile-letter-spacing: -0.5px;
   --hero-mobile-title-font-weight: 600;
   --hero-mobile-subtitle-font-weight: 700;
+
+  --footer-bg-color: rgb(35, 139, 69);
+  --footer-min-height: 20vh;
+  --footer-font-color: rgb(255, 255, 240);
+  --footer-font-weight: 400;
+  --footer-font-size: 12px;
 }
 /* Default body configuration */
 body {
+  min-height: 100vh;
+  margin: 0;
+
   background-color: var(--body-bg-color);
 }
 
+footer {
+  min-height: var(--footer-min-height);
+  background-color: var(--footer-bg-color);
+}
 body.no-scroll {
   overflow: hidden;
 }
