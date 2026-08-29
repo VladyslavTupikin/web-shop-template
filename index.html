@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Products</title>
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- Scripts -->
+    <script src="./js/htmx.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.hero.partial.html"
+      ></section>
+    </main>
+  </body>
+</html>
