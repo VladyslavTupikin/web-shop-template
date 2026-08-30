@@ -17,11 +17,20 @@
     <script src="./js/htmx.min.js"></script>
   </head>
   <body>
+    <header>
+      <div class="container"></div>
+    </header>
     <main>
       <section
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="index.hero.partial.html"
+      ></section>
+
+      <section
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="index.products.partial.html"
       ></section>
     </main>
     <footer
@@ -29,5 +38,7 @@
       data-hx-swap="outerHTML"
       data-hx-get="footer.partial.html"
     ></footer>
+
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>
