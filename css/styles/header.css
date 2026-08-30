@@ -1,0 +1,10 @@
+.header {
+  .header-menu {
+    .nav-link {
+      text-transform: uppercase;
+    }
+    .navbar {
+      font-family: var(--font-main);
+    }
+  }
+}

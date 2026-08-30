@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Vladyslav Tupikin
+ * SPDX-License-Identifier: ISC
+ */
+
 import { RenderProducts } from "./modules/render-product.js";
 
 // document.body.addEventListener("htmx:afterSwap", (event) => {
