@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 :root {
@@ -33,6 +33,26 @@
   --footer-font-color: rgb(255, 255, 240);
   --footer-font-weight: 400;
   --footer-font-size: 12px;
+
+  --products-card-image-width: 200px;
+  --products-card-image-height: 200px;
+  --products-card-margin: 20px;
+  --products-card-gap: 24px;
+  --products-card-title-font-family: "Inter", sans-serif;
+  --products-card-title-font-size: 1.5rem;
+  --products-card-title-font-weight: 500;
+  --products-card-price-font-family: var(--products-card-title-font-family);
+  --products-card-price-font-size: 1.2rem;
+  --products-card-price-font-weight: 400;
+  --products-card-price-font-color: rgb(35, 139, 69);
+  --product-card-button-font-family: "Inter", sans-serif;
+  --product-card-button-font-size: 1rem;
+  --product-card-button-font-weight: 600;
+  --product-card-button-edit-bg-color: rgb(25, 135, 84);
+  --product-card-button-edit-font-color: rgb(255, 255, 240);
+  --product-card-button-delete-bg-color: rgb(220, 53, 69);
+  --product-card-button-delete-font-color: rgb(255, 255, 240);
+  --product-card-button-delete-active-color: rgb(255, 49, 49);
 }
 /* Default body configuration */
 body {

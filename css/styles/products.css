@@ -1,0 +1,90 @@
+.products {
+  position: relative;
+
+  .product-card {
+    padding-top: 20px;
+  }
+
+  .products__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: var(--products-card-gap);
+    margin-top: var(--products-card-margin);
+    margin-bottom: var(--products-card-margin);
+  }
+
+  .product-card__image {
+    max-width: var(--products-card-image-width);
+    max-height: var(--products-card-image-height);
+  }
+
+  .product-card__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .product-card__title {
+    font-family: var(--products-card-title-font-family);
+    font-weight: var(--products-card-title-font-weight);
+    font-size: var(--products-card-title-font-size);
+    padding-bottom: 5px;
+  }
+
+  .product-card__price {
+    font-family: var(--products-card-price-font-family);
+    font-weight: var(--products-card-price-font-weight);
+    font-size: var(--products-card-price-font-size);
+    color: var(--products-card-price-font-color);
+    padding-bottom: 10px;
+  }
+
+  .product-card__button-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+  }
+
+  .product-card__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-family: var(--product-card-button-font-family);
+    font-weight: var(--product-card-button-font-weight);
+    font-size: var(--product-card-button-font-size);
+
+    box-shadow: none;
+    border: none;
+
+    width: 75px;
+    height: 40px;
+  }
+
+  .product-card__button--edit {
+    background: var(--product-card-button-edit-bg-color);
+    color: var(--product-card-button-edit-font-color);
+  }
+
+  .product-card__button--edit:active {
+    color: var(--product-card-button-edit-bg-color);
+    background: var(--product-card-button-edit-font-color);
+  }
+
+  .product-card__button--delete {
+    background: var(--product-card-button-delete-bg-color);
+    color: var(--product-card-button-delete-font-color);
+  }
+
+  .product-card__button--delete:active {
+    background: var(--product-card-button-delete-font-color);
+    color: var(--product-card-button-delete-active-color);
+  }
+}
