@@ -19,6 +19,18 @@
     margin-bottom: var(--products-card-margin);
   }
 
+  @media (min-width: 768px) {
+    .products__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .products__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
   .product-card__image {
     max-width: var(--products-card-image-width);
     max-height: var(--products-card-image-height);
