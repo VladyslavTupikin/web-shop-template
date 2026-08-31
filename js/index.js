@@ -31,7 +31,6 @@ document.addEventListener("click", async (event) => {
   const buttonDelete = event.target.closest(".product-card__button--delete");
 
   if (!buttonDelete) {
-    console.error(`Error: Delete button is not accessible: ${buttonDelete}`);
     return;
   }
 
