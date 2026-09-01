@@ -1,0 +1,85 @@
+.add-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 30px;
+
+  .add-item__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background-color: var(--products-card-bg-color);
+    border: none;
+    border-radius: 12px;
+    padding: 30px;
+
+    min-height: 200px;
+    max-width: 500px;
+
+    font-family: var(--products-card-title-font-family);
+    font-size: 1rem;
+  }
+
+  .add-item__button-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .add-item__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-family: var(--product-card-button-font-family);
+    font-weight: var(--product-card-button-font-weight);
+    font-size: var(--product-card-button-font-size);
+
+    box-shadow: none;
+    border: none;
+
+    width: 75px;
+    height: 40px;
+  }
+
+  .add-item__button--add {
+    background: var(--product-card-button-edit-bg-color);
+    color: var(--product-card-button-edit-font-color);
+  }
+
+  .add-item__button--add:active {
+    color: var(--product-card-button-edit-bg-color);
+    background: var(--product-card-button-edit-font-color);
+  }
+
+  .add-item__button--cancel {
+    background: var(--product-card-button-delete-bg-color);
+    color: var(--product-card-button-delete-font-color);
+  }
+
+  .add-item__button--cancel:active {
+    background: var(--product-card-button-delete-font-color);
+    color: var(--product-card-button-delete-active-color);
+  }
+}
+
+@media (min-width: 768px) {
+  .add-item {
+    .add-item__container {
+      min-width: 500px;
+    }
+
+    .form__input {
+      width: 450px;
+    }
+  }
+}

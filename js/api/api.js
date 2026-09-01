@@ -49,3 +49,21 @@ export async function updateProduct(id, name, price) {
 
   return response.data;
 }
+
+export async function createProduct(name, price) {
+  let response;
+
+  try {
+    const createProductQuery = `products`;
+    console.log(`name: ${name} price: ${price}`);
+    response = await axios.post(`${serverAddr}/${createProductQuery}`, {
+      name,
+      price,
+    });
+  } catch (err) {
+    console.error(`Error: createProduct: ${err.message}`);
+    return;
+  }
+
+  return response.data;
+}
