@@ -4,7 +4,7 @@
  */
 
 import { RenderProducts } from "./modules/render-product.js";
-import { getProducts, deleteProduct } from "./api/api.js";
+import { getProducts, deleteProduct, updateProduct } from "./api/api.js";
 
 document.body.addEventListener("htmx:load", (event) => {
   const productsSection = event.detail.elt.querySelector(".products__list");
@@ -48,4 +48,42 @@ document.addEventListener("click", async (event) => {
 
   // Remove product card instance from the Web Page
   article.remove();
+});
+
+document.addEventListener("click", async (event) => {
+  const buttonEdit = event.target.closest(".product-card__button--edit");
+
+  if (!buttonEdit) {
+    return;
+  }
+
+  const dialog = document.querySelector(".form-dialog");
+  dialog.showModal();
+
+  const buttonCancel = document.querySelector(".form__button--close");
+  buttonCancel.addEventListener("click", () => {
+    dialog.close();
+  });
+
+  const buttonSubmit = document.querySelector(".form__button--update");
+  buttonSubmit.addEventListener("click", async () => {
+    const dataName = document.querySelector(".form__input--name");
+    const dataPrice = document.querySelector(".form__input--price");
+
+    const article = buttonEdit.closest(".product-card");
+
+    // Update instance from the Backend side via PATCH request
+    const res = await updateProduct(
+      article.dataset.productId,
+      dataName.value,
+      dataPrice.value,
+    );
+
+    if (!res) {
+      console.error(
+        `Error: Failed to update instance ${article.dataset.productId}`,
+      );
+      return;
+    }
+  });
 });

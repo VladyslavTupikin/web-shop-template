@@ -1,0 +1,77 @@
+.form {
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px); /* Optional: blurs background content */
+  }
+
+  /* Form container fixed styling */
+  .form-dialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+
+    background-color: var(--products-card-bg-color);
+    border: none;
+    border-radius: 12px;
+    padding: 30px;
+    min-height: 200px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+    font-family: var(--products-card-title-font-family);
+    font-size: 1rem;
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .form__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-family: var(--product-card-button-font-family);
+    font-weight: var(--product-card-button-font-weight);
+    font-size: var(--product-card-button-font-size);
+
+    box-shadow: none;
+    border: none;
+
+    width: 75px;
+    height: 40px;
+  }
+
+  .form__button--update {
+    background: var(--product-card-button-edit-bg-color);
+    color: var(--product-card-button-edit-font-color);
+  }
+
+  .form__button--update:active {
+    color: var(--product-card-button-edit-bg-color);
+    background: var(--product-card-button-edit-font-color);
+  }
+
+  .form__button--close {
+    background: var(--product-card-button-delete-bg-color);
+    color: var(--product-card-button-delete-font-color);
+  }
+
+  .form__button--close:active {
+    background: var(--product-card-button-delete-font-color);
+    color: var(--product-card-button-delete-active-color);
+  }
+}

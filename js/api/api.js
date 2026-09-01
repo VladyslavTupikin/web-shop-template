@@ -32,3 +32,20 @@ export async function deleteProduct(id) {
 
   return response.data;
 }
+
+export async function updateProduct(id, name, price) {
+  let response;
+
+  try {
+    const deleteProductQuery = `products/${id}`;
+    response = await axios.patch(`${serverAddr}/${deleteProductQuery}`, {
+      name,
+      price,
+    });
+  } catch (err) {
+    console.error(`Error: deleteProduct: ${err.message}`);
+    return;
+  }
+
+  return response.data;
+}
